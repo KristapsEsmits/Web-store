@@ -1,7 +1,6 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {ThemeService} from "../../services/theme.service";
 import {BehaviorSubject, filter, fromEvent, Observable, startWith, take, tap} from "rxjs";
-import {FormGroup} from "@angular/forms";
 import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
@@ -10,9 +9,6 @@ import {NavigationEnd, Router} from "@angular/router";
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent {
-  @Input()
-  public searchForm!: FormGroup;
-
   @Output()
   public toggleSideNav: EventEmitter<void> = new EventEmitter<void>();
 
@@ -41,9 +37,6 @@ export class ToolbarComponent {
       .pipe(
         filter((event) => event instanceof NavigationEnd)
       )
-      .subscribe(() => {
-        this.searchForm.reset({name: undefined})
-      })
   }
 
   public get isProjectsView(): boolean {
@@ -66,13 +59,5 @@ export class ToolbarComponent {
         )
       )
       .subscribe();
-  }
-
-  public resetForm(): void {
-    this.searchForm.reset({name: undefined});
-  }
-
-  onPress(): void {
-    this.display = !this.display;
   }
 }
