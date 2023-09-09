@@ -1,0 +1,34 @@
+<mat-toolbar>
+  <button (click)="onToggleSideNav()"
+          class="search-icon"
+          mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span *ngIf="!display || ((isMobileView$ | async) === false && display)" class="title">VivaNet</span>
+  <span class="spacer"></span>
+  <form *ngIf="isProjectsView"
+        [formGroup]="searchForm"
+        class="form">
+    <mat-form-field *ngIf="display" class="search-form-field">
+      <input
+        formControlName="name"
+        matInput
+        placeholder="Search"
+        type="text"
+      />
+      <button (click)="resetForm(); onPress()" mat-icon-button matSuffix>
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </form>
+  <div *ngIf="isProjectsView"
+       [class.darkMode]="isDarkTheme$ | async"
+       class="border">
+    <button (click)="onPress()" *ngIf="!display" class="search-icon" mat-icon-button>
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+  <button (click)="onThemeChange()" class="search-icon" mat-icon-button>
+    <mat-icon>{{(isDarkTheme$ | async) ? 'nightlight' : 'light_mode'}}</mat-icon>
+  </button>
+</mat-toolbar>
