@@ -1,4 +1,3 @@
-
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
@@ -15,7 +14,12 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {FooterComponent} from './shared/components/footer/footer.component';
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {AppRoutingModule} from './app-routing.module';
-import { HomeComponent } from './home/components/home/home.component';
+import {HomeComponent} from './home/components/home/home.component';
+import { AdminComponent } from './admin/componenets/admin/admin.component';
+import { CartComponent } from './cart/components/cart/cart.component';
+import { ItemViewComponent } from './ItemView/components/item-view/item-view.component';
+
+
 
 @NgModule({
   declarations: [
@@ -25,7 +29,10 @@ import { HomeComponent } from './home/components/home/home.component';
     SidenavComponent,
     FooterComponent,
 
-     HomeComponent,
+    HomeComponent,
+     AdminComponent,
+     CartComponent,
+     ItemViewComponent,
 
   ],
   imports: [

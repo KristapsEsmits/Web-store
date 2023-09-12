@@ -1,5 +1,10 @@
-<div class="footer-container">
-  <p>foooteris</p>
+<div
+  [class.darkMode]="isDarkTheme$ | async"
+  class="footer-container">
+  <p
+    [class.darkMode]="isDarkTheme$ | async"
+    class="text">
+    foooteris</p>
 </div>
 
 
