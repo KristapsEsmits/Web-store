@@ -5,6 +5,7 @@ import {HomeComponent} from "./home/components/home/home.component";
 import {AdminComponent} from "./admin/componenets/admin/admin.component";
 import {CartComponent} from "./cart/components/cart/cart.component";
 import {ItemViewComponent} from "./ItemView/components/item-view/item-view.component";
+import {AuthenticationComponent} from "./authentication/components/authentication/authentication.component";
 
 
 const routes: Route[] = [
@@ -26,8 +27,12 @@ const routes: Route[] = [
     component: CartComponent,
   },
   {
-    path: 'ItemView',
+    path: 'itemview',
     component: ItemViewComponent,
+  },
+  {
+    path: 'authentication',
+    component: AuthenticationComponent,
   },
 ]
 

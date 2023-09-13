@@ -18,6 +18,15 @@ import {HomeComponent} from './home/components/home/home.component';
 import { AdminComponent } from './admin/componenets/admin/admin.component';
 import { CartComponent } from './cart/components/cart/cart.component';
 import { ItemViewComponent } from './ItemView/components/item-view/item-view.component';
+import {NgOptimizedImage} from "@angular/common";
+import { EmptyCartComponent } from './cart/components/empty-cart/empty-cart.component';
+import {MatCardModule} from "@angular/material/card";
+import { AuthenticationComponent } from './authentication/components/authentication/authentication.component';
+import { SimilarProductsComponent } from './ItemView/components/similar-products/similar-products.component';
+import { ProductGalleryComponent } from './ItemView/components/product-gallery/product-gallery.component';
+import { TechnicalSpecificationComponent } from './ItemView/components/technical-specification/technical-specification.component';
+import { ProductComponent } from './ItemView/components/product/product.component';
+import { FullCartComponent } from './cart/components/full-cart/full-cart.component';
 
 
 
@@ -30,9 +39,16 @@ import { ItemViewComponent } from './ItemView/components/item-view/item-view.com
     FooterComponent,
 
     HomeComponent,
-     AdminComponent,
-     CartComponent,
-     ItemViewComponent,
+    AdminComponent,
+    CartComponent,
+    ItemViewComponent,
+    EmptyCartComponent,
+    AuthenticationComponent,
+    SimilarProductsComponent,
+    ProductGalleryComponent,
+    TechnicalSpecificationComponent,
+    ProductComponent,
+    FullCartComponent,
 
   ],
   imports: [
@@ -47,6 +63,8 @@ import { ItemViewComponent } from './ItemView/components/item-view/item-view.com
     RouterOutlet,
     RouterLink,
     AppRoutingModule,
+    NgOptimizedImage,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
