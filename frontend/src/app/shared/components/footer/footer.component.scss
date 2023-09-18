@@ -1,0 +1,44 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  background: #FFFFFF;
+
+  &.darkMode {
+    background: #1e1c1c;
+  }
+}
+
+.footer-container {
+
+  ul {
+    list-style-type: none;
+  }
+
+  a {
+    &.darkMode {
+      color: #ffffff;
+    }
+  }
+
+  .gap {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+
+  &.darkMode {
+    color: #ffffff;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+}

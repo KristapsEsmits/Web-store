@@ -1,0 +1,26 @@
+.sidenav-container {
+  height: calc(100% - 64px);
+}
+
+.sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav {
+  padding: 20px;
+}
+
+.menu-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 599px) {
+  .sidenav-container {
+    height: calc(100% - 59px);
+  }
+
+}
