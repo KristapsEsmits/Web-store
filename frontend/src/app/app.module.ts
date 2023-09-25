@@ -29,6 +29,7 @@ import { ProductComponent } from './ItemView/components/product/product.componen
 import { FullCartComponent } from './cart/components/full-cart/full-cart.component';
 import { LoginComponent } from './authentication/components/login/login.component';
 import { RegisterComponent } from './authentication/components/register/register.component';
+import {MatSelectModule} from "@angular/material/select";
 
 
 
@@ -69,6 +70,7 @@ import { RegisterComponent } from './authentication/components/register/register
     AppRoutingModule,
     NgOptimizedImage,
     MatCardModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
